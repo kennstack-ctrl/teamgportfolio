@@ -1,0 +1,22 @@
+
+/*
+Theme Name: Team G Portfolio
+Description: My custom WordPress portfolio child theme
+Author: Team G
+Version: 1.0.0
+Template: twentytwentyfour
+Text Domain: teamgportfolio
+*/
+
+/* My custom CSS */
+
+.wp-block-button__link {
+    background-color: #1684C7;
+    color: white;
+    border-radius: 8px;
+    padding: 12px 25px;
+}
+
+.wp-block-button__link:hover {
+    background-color: #0d6396;
+}
