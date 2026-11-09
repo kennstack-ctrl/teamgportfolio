@@ -1,0 +1,126 @@
+
+<?php
+/**
+ * Template Name: Team G Showcase
+ * Team G Portfolio - Team Page
+ */
+
+$members = [
+    [
+        'name' => 'Member One',
+        'role' => 'Project Manager',
+        'image' => 'member1.jpg',
+        'slug' => 'member-one',
+        'color' => '#1684C7',
+        'dark_color' => '#0B344F'
+    ],
+    [
+        'name' => 'Member Two',
+        'role' => 'Technical Writer',
+        'image' => 'member2.jpg',
+        'slug' => 'member-two',
+        'color' => '#176A61',
+        'dark_color' => '#0A302C'
+    ],
+    [
+        'name' => 'Member Three',
+        'role' => 'System Analyst',
+        'image' => 'member3.jpg',
+        'slug' => 'member-three',
+        'color' => '#A44555',
+        'dark_color' => '#481B26'
+    ],
+    [
+        'name' => 'Member Four',
+        'role' => 'Programmer',
+        'image' => 'member4.jpg',
+        'slug' => 'member-four',
+        'color' => '#9B762F',
+        'dark_color' => '#493515'
+    ]
+];
+?>
+<!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+    <meta charset="<?php bloginfo('charset'); ?>">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?>>
+<?php wp_body_open(); ?>
+
+<header class="portfolio-header">
+    <a class="portfolio-logo"
+       href="<?php echo esc_url(home_url('/')); ?>">
+        TEAM<span>G</span>
+    </a>
+
+    <nav class="portfolio-nav" aria-label="Main navigation">
+        <a href="<?php echo esc_url(home_url('/')); ?>">Home</a>
+        <a href="<?php echo esc_url(home_url('/about/')); ?>">About</a>
+        <a href="<?php echo esc_url(home_url('/team/')); ?>">Team</a>
+        <a href="<?php echo esc_url(home_url('/projects/')); ?>">Projects</a>
+        <a href="<?php echo esc_url(home_url('/contact/')); ?>">Contact</a>
+    </nav>
+</header>
+
+<main class="team-showcase">
+
+    <div class="team-heading">
+        <p>THE PEOPLE BEHIND THE PROJECT</p>
+        <h1>MEET TEAMGENE</h1>
+        <h2>FOUR MINDS. ONE TEAM.</h2>
+    </div>
+
+    <div class="team-cards">
+
+        <?php foreach ($members as $member) : ?>
+
+            <a
+                class="team-card"
+                href="<?php echo esc_url(
+                    home_url('/' . $member['slug'] . '/')
+                ); ?>"
+                style="
+                    --card-color: <?php echo esc_attr($member['color']); ?>;
+                    --card-dark: <?php echo esc_attr($member['dark_color']); ?>;
+                "
+            >
+
+                <div class="team-photo">
+                    <img
+                        src="<?php echo esc_url(
+                            get_stylesheet_directory_uri()
+                            . '/assets/images/'
+                            . $member['image']
+                        ); ?>"
+                        alt="<?php echo esc_attr($member['name']); ?>"
+                    >
+                </div>
+
+                <div class="team-info">
+                    <h3><?php echo esc_html($member['name']); ?></h3>
+                    <p><?php echo esc_html($member['role']); ?></p>
+                    <span>VIEW PROFILE →</span>
+                </div>
+
+            </a>
+
+        <?php endforeach; ?>
+
+    </div>
+
+</main>
+
+<footer class="portfolio-footer">
+    <p>
+        &copy; <?php echo esc_html(date('Y')); ?>
+        Team G Portfolio. All rights reserved.
+    </p>
+</footer>
+
+<?php wp_footer(); ?>
+</body>
+</html>
