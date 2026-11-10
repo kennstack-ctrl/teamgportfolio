@@ -1,15 +1,15 @@
 
 <?php
 /**
- * Template Name: Team G Showcase
- * Team G Portfolio - Team Page
+ * Template Name: TeamGene Showcase
+ * TeamGene Portfolio - Team Page
  */
 
 $members = [
     [
         'name' => 'Member One',
         'role' => 'Project Manager',
-        'image' => 'member1.jpg',
+        'image' => 'm1.png',
         'slug' => 'member-one',
         'color' => '#1684C7',
         'dark_color' => '#0B344F'
@@ -17,7 +17,7 @@ $members = [
     [
         'name' => 'Member Two',
         'role' => 'Technical Writer',
-        'image' => 'member2.jpg',
+        'image' => 'm2.png',
         'slug' => 'member-two',
         'color' => '#176A61',
         'dark_color' => '#0A302C'
@@ -25,7 +25,7 @@ $members = [
     [
         'name' => 'Member Three',
         'role' => 'System Analyst',
-        'image' => 'member3.jpg',
+        'image' => 'm3.png',
         'slug' => 'member-three',
         'color' => '#A44555',
         'dark_color' => '#481B26'
@@ -33,7 +33,7 @@ $members = [
     [
         'name' => 'Member Four',
         'role' => 'Programmer',
-        'image' => 'member4.jpg',
+        'image' => 'm4.png',
         'slug' => 'member-four',
         'color' => '#9B762F',
         'dark_color' => '#493515'
@@ -54,7 +54,7 @@ $members = [
 <header class="portfolio-header">
     <a class="portfolio-logo"
        href="<?php echo esc_url(home_url('/')); ?>">
-        TEAM<span>G</span>
+        TEAM<span>GENE</span>
     </a>
 
     <nav class="portfolio-nav" aria-label="Main navigation">
@@ -117,7 +117,7 @@ $members = [
 <footer class="portfolio-footer">
     <p>
         &copy; <?php echo esc_html(date('Y')); ?>
-        Team G Portfolio. All rights reserved.
+        TeamGene Portfolio. All rights reserved.
     </p>
 </footer>
 
