@@ -1,77 +1,70 @@
 
 <?php
 /**
- * Template Name: Team G Member Portfolio
- * Description: Individual Team G member profiles
+ * TeamGene Individual Member Portfolio
  */
 
 $members = [
     'member-one' => [
-        'name' => 'Member One',
+        'name' => 'Rayver Jay Jamis',
         'role' => 'Project Manager',
-        'image' => 'member1.jpg',
+        'image' => 'mem1.png',
         'color' => '#1684C7',
         'dark_color' => '#0B344F',
-        'about' => 'I help organise projects, coordinate teams and deliver creative digital solutions.',
+        'about' => '',
         'skills' => [
             'Project Planning',
             'Team Management',
             'Communication',
             'Problem Solving'
-        ],
-        'email' => ''
+        ]
     ],
 
     'member-two' => [
-        'name' => 'Member Two',
+        'name' => 'Clint Raven Tayanes',
         'role' => 'Technical Writer',
-        'image' => 'member2.jpg',
+        'image' => 'mem2.png',
         'color' => '#176A61',
         'dark_color' => '#0A302C',
-        'about' => 'I create clear, helpful and engaging technical documentation that makes complex information easier to understand.',
+        'about' => '',
         'skills' => [
             'Technical Writing',
             'Documentation',
             'Research',
             'Content Editing'
-        ],
-        'email' => ''
+        ]
     ],
 
     'member-three' => [
-        'name' => 'Member Three',
+        'name' => 'Kenan Bokingo',
         'role' => 'System Analyst',
-        'image' => 'member3.jpg',
+        'image' => 'mem5.png',
         'color' => '#A44555',
         'dark_color' => '#481B26',
-        'about' => 'I analyse systems, identify improvements and help create practical technology solutions.',
+        'about' => '',
         'skills' => [
             'System Analysis',
             'Requirements Gathering',
             'Problem Solving',
             'Process Improvement'
-        ],
-        'email' => ''
+        ]
     ],
 
     'member-four' => [
-        'name' => 'Member Four',
+        'name' => 'Jose Gabriel Bonalos',
         'role' => 'Programmer',
-        'image' => 'member4.jpg',
+        'image' => 'mem4.png',
         'color' => '#9B762F',
         'dark_color' => '#493515',
-        'about' => 'I enjoy writing code, solving technical challenges and building reliable digital applications.',
+        'about' => '',
         'skills' => [
             'PHP',
             'JavaScript',
             'MySQL',
             'Programming'
-        ],
-        'email' => ''
+        ]
     ]
 ];
-
-/* Get current page slug */
 
 $slug = get_post_field(
     'post_name',
@@ -87,8 +80,6 @@ if (!$member) {
     return;
 }
 
-/* Member photo */
-
 $photo = get_stylesheet_directory_uri()
     . '/assets/images/'
     . $member['image'];
@@ -101,20 +92,17 @@ $photo = get_stylesheet_directory_uri()
     <meta charset="<?php bloginfo('charset'); ?>">
     <meta name="viewport"
           content="width=device-width, initial-scale=1">
-
     <?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 
-<!-- HEADER -->
-
 <header class="portfolio-header">
 
     <a class="portfolio-logo"
        href="<?php echo esc_url(home_url('/')); ?>">
-        TEAM<span>G</span>
+        TEAM<span>GENE</span>
     </a>
 
     <nav class="portfolio-nav"
@@ -136,8 +124,6 @@ $photo = get_stylesheet_directory_uri()
 
 </header>
 
-<!-- INDIVIDUAL MEMBER PROFILE -->
-
 <main
     class="member-portfolio"
     style="
@@ -148,77 +134,32 @@ $photo = get_stylesheet_directory_uri()
 
     <div class="member-layout">
 
-        <!-- HERO -->
+        
+<section class="member-hero">
 
-        <section class="member-hero">
+    <div class="member-hero-title">
 
-            <div class="member-details">
-
-                <p class="member-eyebrow">
-                    HI, I AM
-                </p>
-
-                <h1>
-                    <?php echo esc_html($member['name']); ?>
-                </h1>
-
-                <h2>
-                    <?php echo esc_html($member['role']); ?>
-                </h2>
-
-                <p class="member-description">
-                    <?php echo esc_html($member['about']); ?>
-                </p>
-
-                <div class="member-actions">
-
-                    <a class="member-btn primary"
-                       href="#contact">
-                        Contact Me
-                    </a>
-
-                </div>
-
-            </div>
-
-            <!-- OVAL MEMBER PHOTO -->
-
-            <div class="member-portrait">
-
-                <img
-                    src="<?php echo esc_url($photo); ?>"
-                    alt="<?php echo esc_attr($member['name']); ?>"
-                >
-
-            </div>
-
-        </section>
-
-        <!-- TWO GRADIENT CARDS -->
-
-        <div class="member-feature-cards">
-
-            <a class="member-feature-card"
-               href="#about">
-
-                <strong>01</strong>
-                <span>About Me</span>
-
-            </a>
-
-            <a class="member-feature-card"
-               href="#skills">
-
-                <strong>02</strong>
-                <span>My Skills</span>
-
-            </a>
-
-        </div>
+        <h1><?php echo esc_html($member['name']); ?></h1>
+        <h2><?php echo esc_html($member['role']); ?></h2>
 
     </div>
 
-    <!-- ABOUT SECTION -->
+    <div class="member-hero-outline" aria-hidden="true">
+
+        <h1><?php echo esc_html($member['name']); ?></h1>
+        <h2><?php echo esc_html($member['role']); ?></h2>
+
+    </div>
+
+    <div class="member-portrait">
+        <img
+            src="<?php echo esc_url($photo); ?>"
+            alt="<?php echo esc_attr($member['name']); ?>"
+        >
+    </div>
+
+</section>
+
 
     <section class="member-content-section"
              id="about">
@@ -227,17 +168,13 @@ $photo = get_stylesheet_directory_uri()
             GET TO KNOW ME
         </p>
 
-        <h2>
-            About <span>Me</span>
-        </h2>
+        <h2>About <span>Me</span></h2>
 
         <p>
             <?php echo esc_html($member['about']); ?>
         </p>
 
     </section>
-
-    <!-- SKILLS SECTION -->
 
     <section class="member-content-section"
              id="skills">
@@ -246,9 +183,7 @@ $photo = get_stylesheet_directory_uri()
             WHAT I DO
         </p>
 
-        <h2>
-            My <span>Skills</span>
-        </h2>
+        <h2>My <span>Skills</span></h2>
 
         <div class="member-skills">
 
@@ -264,53 +199,40 @@ $photo = get_stylesheet_directory_uri()
 
     </section>
 
-    <!-- CONTACT SECTION -->
-
     <section class="member-content-section"
              id="contact">
 
         <p class="member-section-label">
             LET'S CONNECT
-        </p>
+        <div class="member-actions">
 
-        <h2>
-            Contact <span>Me</span>
-        </h2>
+                    <a class="member-btn primary"
+                       href="#contact">
+                        Contact Me
+                    </a>
 
-        <?php if (!empty($member['email'])) : ?>
+                </div>
 
-            <a class="member-btn primary"
-               href="<?php echo esc_url('mailto:' . $member['email']); ?>">
-                Send Email
-            </a>
-
-        <?php else : ?>
-
-            <p>Contact details coming soon.</p>
-
-        <?php endif; ?>
 
     </section>
-
-    <!-- BACK TO TEAM -->
 
     <div class="member-return">
 
         <a href="<?php echo esc_url(home_url('/team/')); ?>">
-            &larr; Back to Team G
+            &larr; Back to TeamGene
         </a>
 
     </div>
 
 </main>
 
-<!-- FOOTER -->
-
 <footer class="portfolio-footer">
+
     <p>
         &copy; <?php echo esc_html(date('Y')); ?>
-        Team G Portfolio. All rights reserved.
+        TeamGene Portfolio. All rights reserved.
     </p>
+
 </footer>
 
 <?php wp_footer(); ?>
