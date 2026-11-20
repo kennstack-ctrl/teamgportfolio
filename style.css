@@ -721,3 +721,392 @@ body {
     justify-content: center !important;
     transform: translateY(180px) !important;
 }
+
+
+
+
+
+/* ==========================================
+   TEAMGENE PROJECTS PAGE
+   ========================================== */
+
+.teamgene-projects {
+    background: #11131a;
+    color: #ffffff;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.teamgene-projects * {
+    box-sizing: border-box;
+}
+
+.teamgene-projects .projects-container {
+    width: 88%;
+    max-width: none;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* HERO */
+
+.teamgene-projects .projects-hero {
+    padding: 120px 0 110px;
+    background: linear-gradient(
+        115deg,
+        #11131a 20%,
+        #0b344f 100%
+    );
+}
+
+.teamgene-projects .projects-eyebrow {
+    color: #1684c7;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.teamgene-projects .projects-hero h1 {
+    color: #ffffff;
+    font-size: clamp(55px, 8vw, 120px);
+    font-weight: 900;
+    line-height: 1;
+    letter-spacing: -4px;
+    margin: 0 0 35px;
+}
+
+.teamgene-projects .projects-hero h1 span {
+    color: #1684c7;
+}
+
+.teamgene-projects .projects-intro {
+    color: #c5cbd4;
+    font-size: 18px;
+    line-height: 1.8;
+    max-width: 650px;
+}
+
+/* PROJECT SECTION */
+
+.teamgene-projects .projects-section {
+    padding: 100px 0 130px;
+}
+
+.teamgene-projects .projects-section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    gap: 30px;
+    margin-bottom: 55px;
+}
+
+.teamgene-projects .projects-section-heading h2 {
+    color: #ffffff;
+    font-size: clamp(35px, 4vw, 55px);
+    font-weight: 800;
+    margin: 0;
+}
+
+.teamgene-projects .projects-section-heading > p {
+    color: #aab3c0;
+    max-width: 300px;
+    line-height: 1.7;
+}
+
+/* PROJECT GRID */
+
+.teamgene-projects .projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+/* CARDS */
+
+.teamgene-projects .project-card {
+    background: #1b1e27;
+    border: 1px solid #303541;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.35s ease, border-color 0.35s ease;
+}
+
+.teamgene-projects .project-card:hover {
+    transform: translateY(-10px);
+    border-color: #1684c7;
+}
+
+/* PROJECT IMAGES */
+
+.teamgene-projects .project-image {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    background: #0b344f;
+}
+
+.teamgene-projects .project-image img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.teamgene-projects .project-card:hover .project-image img {
+    transform: scale(1.06);
+}
+
+/* IMAGE PLACEHOLDER */
+
+.teamgene-projects .project-placeholder {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    background: linear-gradient(
+        135deg,
+        #0b344f,
+        #1684c7
+    );
+}
+
+.teamgene-projects .project-placeholder span {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 5px;
+    color: #ffffff;
+}
+
+.teamgene-projects .project-placeholder strong {
+    font-size: 90px;
+    font-weight: 900;
+    color: rgba(255, 255, 255, 0.18);
+}
+
+/* CARD CONTENT */
+
+.teamgene-projects .project-details {
+    padding: 30px;
+}
+
+.teamgene-projects .project-meta {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    color: #1684c7;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+.teamgene-projects .project-details h3 {
+    color: #ffffff;
+    font-size: 25px;
+    font-weight: 800;
+    margin: 0 0 15px;
+}
+
+.teamgene-projects .project-details p {
+    color: #b4bac5;
+    font-size: 15px;
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.teamgene-projects .project-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: #1684c7;
+    font-size: 14px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: gap 0.3s ease;
+}
+
+.teamgene-projects a.project-link:hover {
+    gap: 20px;
+    color: #ffffff;
+}
+
+.teamgene-projects .project-link-disabled {
+    color: #8b98a7;
+    cursor: default;
+}
+
+/* BOTTOM SECTION */
+
+.teamgene-projects .projects-bottom {
+    padding: 110px 0;
+    text-align: center;
+    background: #0b1622;
+    border-top: 1px solid #303541;
+}
+
+.teamgene-projects .projects-bottom h2 {
+    color: #ffffff;
+    font-size: clamp(45px, 7vw, 95px);
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0 0 30px;
+}
+
+.teamgene-projects .projects-bottom h2 span {
+    color: #1684c7;
+}
+
+.teamgene-projects .projects-bottom p:not(.projects-eyebrow) {
+    color: #b4bac5;
+    font-size: 17px;
+    line-height: 1.8;
+    max-width: 550px;
+    margin: 0 auto 35px;
+}
+
+.teamgene-projects .projects-team-btn {
+    display: inline-block;
+    background: #1684c7;
+    color: #ffffff;
+    padding: 16px 32px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.teamgene-projects .projects-team-btn:hover {
+    background: #0d6396;
+    color: #ffffff;
+    transform: translateY(-3px);
+}
+
+/* TABLET */
+
+@media (max-width: 1000px) {
+    .teamgene-projects .projects-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* MOBILE */
+
+@media (max-width: 650px) {
+    .teamgene-projects .projects-hero {
+        padding: 80px 0;
+    }
+
+    .teamgene-projects .projects-hero h1 {
+        letter-spacing: -2px;
+    }
+
+    .teamgene-projects .projects-intro {
+        font-size: 16px;
+    }
+
+    .teamgene-projects .projects-section {
+        padding: 70px 0;
+    }
+
+    .teamgene-projects .projects-section-heading {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .teamgene-projects .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .teamgene-projects .project-image {
+        height: 230px;
+    }
+
+    .teamgene-projects .projects-bottom {
+        padding: 80px 0;
+    }
+}
+
+
+
+
+/* TEAMGENE PROJECTS HEADER */
+
+.projects-custom-header {
+    width: 100%;
+    background: #101218;
+    padding: 30px 0;
+}
+
+.projects-custom-header .projects-nav-container {
+    width: 100%;
+    max-width: none;
+    padding: 0 6%;
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.projects-custom-header .projects-logo {
+    display: block;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    font-size: 26px;
+    font-weight: 900;
+    text-decoration: none;
+    flex-shrink: 0;
+}
+
+.projects-custom-header .projects-logo span {
+    color: #1684c7;
+}
+
+.projects-custom-header .projects-navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
+    margin: 0 0 0 auto;
+    padding: 0;
+}
+
+.projects-custom-header .projects-navigation a {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+.projects-custom-header .projects-navigation a:hover {
+    color: #1684c7;
+}
+
+@media (max-width: 768px) {
+    .projects-custom-header .projects-nav-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .projects-custom-header .projects-navigation {
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: 0;
+        gap: 16px;
+    }
+}
+
+
+
+
+
+
