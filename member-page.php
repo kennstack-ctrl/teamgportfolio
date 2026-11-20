@@ -4,14 +4,15 @@
  * TeamGene Individual Member Portfolio
  */
 
+
 $members = [
     'member-one' => [
         'name' => 'Rayver Jay Jamis',
         'role' => 'Project Manager',
-        'image' => 'mem1.png',
+        'image' => 'mm1.png',
         'color' => '#1684C7',
         'dark_color' => '#0B344F',
-        'about' => '',
+        'about' => "I'm an Information Technology student with a strong interest in project planning, organisation and team management. As TeamGene's Project Manager, I help organise tasks, track project progress, coordinate with team members and ensure that project requirements are met on time. I'm responsible, organised and eager to learn while contributing to the project's success.",
         'skills' => [
             'Project Planning',
             'Team Management',
@@ -23,10 +24,10 @@ $members = [
     'member-two' => [
         'name' => 'Clint Raven Tayanes',
         'role' => 'Technical Writer',
-        'image' => 'mem2.png',
-        'color' => '#176A61',
-        'dark_color' => '#0A302C',
-        'about' => '',
+        'image' => 'mm2.png',
+        'color' => '#1684C7',
+        'dark_color' => '#0B344F',
+        'about' => "I'm an Information Technology student with a strong interest in technology, system development and technical documentation. I'm eager to learn new technologies, improve my skills and contribute meaningfully to team projects. As TeamGene's Technical Writer, I focus on creating clear, organised and accessible documentation.",
         'skills' => [
             'Technical Writing',
             'Documentation',
@@ -38,10 +39,10 @@ $members = [
     'member-three' => [
         'name' => 'Kenan Bokingo',
         'role' => 'System Analyst',
-        'image' => 'mem5.png',
-        'color' => '#A44555',
-        'dark_color' => '#481B26',
-        'about' => '',
+        'image' => 'mm3.png',
+        'color' => '#1684C7',
+        'dark_color' => '#0B344F',
+        'about' => "I'm an Information Technology student with a strong interest in analysing system requirements, business processes and user needs. As TeamGene's System Analyst, I help identify problems, organise system requirements and translate user needs into clear system functions and processes. I'm detail-oriented, analytical and eager to learn.",
         'skills' => [
             'System Analysis',
             'Requirements Gathering',
@@ -53,10 +54,10 @@ $members = [
     'member-four' => [
         'name' => 'Jose Gabriel Bonalos',
         'role' => 'Programmer',
-        'image' => 'mem4.png',
-        'color' => '#9B762F',
-        'dark_color' => '#493515',
-        'about' => '',
+        'image' => 'mm4.png',
+        'color' => '#1684C7',
+        'dark_color' => '#0B344F',
+        'about' => "I'm an Information Technology student with a strong interest in programming and system development. I enjoy creating functional applications, solving technical problems and improving system features through coding. As TeamGene's Programmer, I'm committed to learning new technologies and continuously developing my programming skills.",
         'skills' => [
             'PHP',
             'JavaScript',
@@ -65,6 +66,7 @@ $members = [
         ]
     ]
 ];
+
 
 $slug = get_post_field(
     'post_name',
@@ -218,9 +220,26 @@ $photo = get_stylesheet_directory_uri()
 
     <div class="member-return">
 
-        <a href="<?php echo esc_url(home_url('/team/')); ?>">
-            &larr; Back to TeamGene
-        </a>
+        
+<a href="<?php echo esc_url(home_url('/team/')); ?>"
+   style="
+       display: inline-flex;
+       align-items: center;
+       gap: 10px;
+       background: #1684C7;
+       color: #ffffff;
+       padding: 14px 26px;
+       border-radius: 10px;
+       text-decoration: none;
+       font-size: 16px;
+       font-weight: 600;
+       transition: 0.3s ease;
+   "
+   onmouseover="this.style.background='#0d6396'"
+   onmouseout="this.style.background='#1684C7'">
+    &#8592; Back to TeamGene
+</a>
+
 
     </div>
 
