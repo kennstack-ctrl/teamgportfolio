@@ -12,31 +12,31 @@ $members = [
         'image' => 'm1.png',
         'slug' => 'member-one',
         'color' => '#1684C7',
-        'dark_color' => '#0B344F'
+        'dark_color' => '#1684C7'
     ],
     [
         'name' => 'Member Two',
         'role' => 'Technical Writer',
         'image' => 'm2.png',
         'slug' => 'member-two',
-        'color' => '#176A61',
-        'dark_color' => '#0A302C'
+        'color' => '#1684C7',
+        'dark_color' => '#1684C7'
     ],
     [
         'name' => 'Member Three',
         'role' => 'System Analyst',
         'image' => 'm3.png',
         'slug' => 'member-three',
-        'color' => '#A44555',
-        'dark_color' => '#481B26'
+        'color' => '#1684C7',
+        'dark_color' => '#1684C7'
     ],
     [
         'name' => 'Member Four',
         'role' => 'Programmer',
         'image' => 'm4.png',
         'slug' => 'member-four',
-        'color' => '#9B762F',
-        'dark_color' => '#493515'
+        'color' => '#1684C7',
+        'dark_color' => '#1684C7'
     ]
 ];
 ?>
